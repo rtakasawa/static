@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="utf-8">
+  <title>朝もやズーン | 2023年1月22日 | さまSAMA</title>
+  <meta name="description" content="冬をテーマにした大型屋外イベントです。">
+  <meta name="copyright" content="Copyright (C) 2016">
+  
+  <meta property="og:title" content="朝もやズーン | 2023年1月22日 | さまSAMA">
+  <meta property="og:description" content="冬をテーマにした大型屋外イベントです。">
+  <meta property="og:image" content="https://rtakasawa.github.io/static/top.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="さまSAMA">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@さまSAMA">
+  <meta name="twitter:image" content="https://rtakasawa.github.io/static/top.png">
+  
+  <script>
+    // facebook,twitterのクローラの場合は、リダイレクトしない
+    var ua = window.navigator.userAgent.toLowerCase();
+    if (ua.indexOf('facebookexternalhit') > -1 || ua.indexOf('twitterbot') > -1) {
+    } else {
+      const urlParams = new URLSearchParams(window.location.search);
+      const params = urlParams.get("p");
+
+      if (params === null) {
+        // indexページ
+        location.replace('https://rtakasawa.github.io/static/index.html');
+      } else {
+        location.replace('https://rtakasawa.github.io/static/' + params);
+      }
+    }
+  </script>
+</head>
+<body></body>
+</html>
