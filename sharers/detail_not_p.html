@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>detail.htmlをシェアする</title>
+</head>
+<body>
+<button id="facebookShareButton">Facebookでシェアする</button>
+<button id="twitterShareButton">Twitterでシェアする</button>
+
+<script>
+  document.getElementById('facebookShareButton').addEventListener('click', function() {
+    // シェアするURLを指定
+    const shareUrl = 'https://rtakasawa.github.io/static/renders/detail.html';
+
+    // Facebook シェア用のURLを生成
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+
+    // 新しいウィンドウでFacebookシェアページを開く
+    window.open(facebookUrl, '_blank', 'width=600,height=400');
+  });
+
+  document.getElementById('twitterShareButton').addEventListener('click', function() {
+    // シェアするURLを指定
+    const shareUrl = 'https://example.com/your-html-page.html';
+
+    // シェアテキストを指定
+    const shareText = encodeURIComponent('こちらのページをチェックしてください！');
+
+    // Twitter シェア用のURLを生成
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${encodeURIComponent(shareUrl)}`;
+
+    // 新しいウィンドウでTwitterシェアページを開く
+    window.open(twitterUrl, '_blank', 'width=600,height=300');
+  });
+</script>
+</body>
+</html>
